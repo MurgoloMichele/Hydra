@@ -104,6 +104,8 @@ def worker(queue, output_dir, file_number):
 								length_file = file_len(filename)
 								if not os.path.exists(output_dir):
 												os.makedirs(output_dir)
+
+								print(year + "/" + month + "/" + day + "/" + hour, end="\r")
 								with open(output_dir + "/" + year + month + day + hour + minute + ".binetflow", "w") as outfile:
 												outfile.write(CONST_HEADER_BINETFLOW)
 
